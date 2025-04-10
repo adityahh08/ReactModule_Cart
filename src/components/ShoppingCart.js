@@ -8,10 +8,10 @@ import "./../style/ShoppingCart.css"
 function ShoppingCart({
   visibilty,
   products,
-  allProducts, // NEW
+  allProducts, 
   onClose,
   onRemoveCart,
-  onCheckout, // NEW
+  onCheckout, 
 }) {
   const getProductDetails = (bookID) => {
     return allProducts.find(product => product.bookID === bookID) || {};
@@ -23,10 +23,10 @@ function ShoppingCart({
         <div className="header">
           <h2>Shopping cart</h2>
           <button className="btn close-btn" onClick={onClose}>
-            <AiFillCloseCircle size={30} />
+            <AiFillCloseCircle size={20} />
           </button>
           <button className="btn remove-cart-btn" onClick={onRemoveCart}>
-            <RiDeleteBin6Line size={30} />
+            <RiDeleteBin6Line size={20} />
           </button>
         </div>
         <div className="cart-products">
@@ -39,13 +39,13 @@ function ShoppingCart({
             return (
               <div className="cart-product" key={product.cartItemID}>
               <img
-                src={details.imageURL || "/placeholder.jpg"}
-                alt={details.title || "Book"}
+                src={details.imageURL}
+                alt={details.title}
                 className="product-image"
               />
               <div className="product-info">
-                <h3>{details.title || `Book #${product.bookID}`}</h3>
-                <span className="product-price">{product.totalAmount}$</span>
+                <h3>{details.title || `Book # ${product.bookID}`}</h3>
+                <span className="product-price">{product.totalAmount} Rs</span>
               </div>
             </div>
             
@@ -64,3 +64,8 @@ function ShoppingCart({
 }
 
 export default ShoppingCart;
+
+
+
+
+

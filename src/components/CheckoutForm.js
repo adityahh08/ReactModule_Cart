@@ -82,6 +82,8 @@ function CheckoutForm({ onCheckout }) {
   };
 
   return (
+
+    <div className="checkout-container">
     <div className="checkout-form">
       <h2>Checkout</h2>
       <form onSubmit={handleSubmit}>
@@ -123,6 +125,8 @@ function CheckoutForm({ onCheckout }) {
         </div>
         <button type="submit" className="btn pay-btn" >Pay Now</button>
       </form>
+    </div>
+
     </div>
   );
 }
