@@ -11,14 +11,24 @@ function ProductList({ products, addProductToCart }) {
             <h4 className="product-name">{product.title}</h4>
             <p className="product-author">Author: {product.author.authorName}</p>
             <p className="product-category">Category: {product.category.categoryName}</p>
-            <span className="product-price">{product.price}$</span>
+            <span className="product-price">{product.price} Rs</span>
           </div>
-          <div className="buttons">
+          <div className="button">
+            <button className="btnss" onClick={() => addProductToCart(product)}>
+              Add to cart
+            </button>
+
+            
+          </div>
+
+          {/* <div className="buttons">
             <button className="btn">Detail</button>
             <button className="btn" onClick={() => addProductToCart(product)}>
               Add to cart
             </button>
-          </div>
+
+            
+          </div> */}
         </div>
       ))}
     </div>
