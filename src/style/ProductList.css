@@ -73,7 +73,7 @@
   }
   
   .product:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   } 
   
   .product-image {
